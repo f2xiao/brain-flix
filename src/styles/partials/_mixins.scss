@@ -1,0 +1,109 @@
+@use "variables" as *;
+
+// media query
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// font
+@mixin font($size: 13px, $height: 18px, $weight: 400) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin responsive-font(
+  $size-m,
+  $height-m,
+  $weight-m,
+  $size-t,
+  $height-t,
+  $weight-t
+) {
+  // mobile
+  @include font($size-m, $height-m, $weight-m);
+
+  // media query for tablet and desktop
+  @include tablet {
+    @include font($size-t, $height-t, $weight-t);
+  }
+}
+
+@mixin responsive-property($prop, $val1, $val2, $val3: $val2) {
+  #{$prop}: $val1;
+
+  @include tablet {
+    #{$prop}: $val2;
+  }
+  @include desktop {
+    #{$prop}: $val3;
+  }
+}
+
+// margin
+@mixin responsive-margin {
+  margin: 0 $margin-m;
+
+  @include tablet {
+    margin: 0 $margin-t;
+  }
+  @include desktop {
+    width: $max-width;
+    margin: 0 $margin-d;
+  }
+}
+
+// flexbox
+@mixin flex($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+}
+
+@mixin flex-cross-center($dir: row) {
+  @include flex($dir);
+  align-items: center;
+}
+
+@mixin flex-main-center($dir: row) {
+  @include flex($dir);
+  justify-content: center;
+}
+
+// cta
+@mixin cta {
+  color: $color-cta-text;
+  text-transform: uppercase;
+  height: 2.5rem;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  background: $color-cta;
+  width: 100%;
+
+  &:hover {
+    background: $color-cta-hover;
+  }
+
+  @include tablet {
+    max-width: 9.375rem;
+  }
+}
+
+@mixin avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: $color-avatar;
+  @include tablet {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
