@@ -1,0 +1,35 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.form {
+  @include flex;
+  gap: 1rem;
+
+  &__avatar {
+    @include flex;
+    padding-top: 1rem;
+    @include tablet {
+      align-items: end;
+    }
+  }
+
+  &__body {
+    flex-basis: 100%;
+    @include flex();
+    gap: 1rem;
+    @include responsive-property(flex-direction, column, row);
+    @include tablet {
+      align-items: end;
+    }
+  }
+
+  &__input {
+    @include responsive-property(flex-basis, 0, 100%);
+  }
+
+  &__textarea {
+    width: 100%;
+    @include responsive-property(padding, 1rem, 0.5rem);
+    @include responsive-property(height, 6rem, 2.5rem);
+  }
+}
