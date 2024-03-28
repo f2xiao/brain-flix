@@ -1,0 +1,50 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.site-header {
+  @include responsive-property(padding-top, $padding-m, $padding-t, $padding-d);
+  &__wrapper {
+    @include responsive-margin;
+    @include flex-cross-center;
+    @include responsive-property(gap, $padding-m, $padding-t, $padding-t);
+
+    @include responsive-property(flex-wrap, wrap, nowrap);
+  }
+
+  &__logo {
+    flex-basis: 100%;
+    @include flex-main-center;
+
+    @include tablet {
+      flex-basis: 120px;
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+  }
+
+  &__img {
+    height: 25px;
+  }
+
+  &__avatar {
+    @include responsive-property(display, block, none);
+
+    &--second {
+      @include responsive-property(display, none, block);
+    }
+  }
+
+  &__search {
+    @include responsive-property(flex-grow, 1, 0);
+    position: relative;
+    min-width: 236px;
+    max-width: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+  }
+}
