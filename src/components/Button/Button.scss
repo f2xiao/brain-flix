@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as *;
+.button {
+  @include cta;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+}
