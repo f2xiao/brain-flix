@@ -1,0 +1,47 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.video {
+  @include responsive-property(padding-top, $padding-m, $padding-t);
+  &__wrapper {
+    @include responsive-margin;
+  }
+
+  &__player {
+    width: 100%;
+
+    &::poster {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__subheader {
+    @include flex;
+    @include responsive-property(flex-wrap, wrap, nowrap);
+    @include responsive-property(gap, 1rem, 2rem);
+
+    border-top: 1px solid $color-divider;
+    border-bottom: 1px solid $color-divider;
+    padding: 1rem 0;
+
+    @include responsive-property(border-top, 1px solid $color-divider, none);
+  }
+
+  &__subtitle {
+    @include responsive-property(flex-basis, 50%, 0);
+  }
+
+  &__date {
+    @include responsive-property(display, none, block);
+    flex-basis: 100%;
+
+    &--second {
+      @include responsive-property(display, block, none);
+      flex-basis: 50%;
+    }
+  }
+
+  &__copy {
+    @include responsive-property(padding-top, $padding-m, $padding-t);
+  }
+}
