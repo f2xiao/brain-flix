@@ -11,14 +11,16 @@ const Form = () => {
       <div className="form__body">
         <div className="form__input">
           <label className="form__label">Join the conversation</label>
-          <input
+          <textarea
             className="form__textarea"
             type="textarea"
             placeholder="Add a new comment"
             required
-          ></input>
+          ></textarea>
         </div>
-        <Button text="comment" iconUrl={commentUrl} />
+        <div className="form__button">
+          <Button text="comment" iconUrl={commentUrl} />
+        </div>
       </div>
     </form>
   );

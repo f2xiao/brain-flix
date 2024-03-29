@@ -1,15 +1,28 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+textarea {
+  border: 1px solid $color-input;
+  background-color: $color-input-bg;
+  border-radius: 4px;
+  resize: none;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+}
+
 .form {
   @include flex;
   gap: 1rem;
+  border-bottom: 1px solid $color-avatar;
+
+  @include responsive-property(padding, $padding-m 0, $padding-t 0);
 
   &__avatar {
     @include flex;
     padding-top: 1rem;
-    @include tablet {
+    @include desktop {
       align-items: end;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -23,13 +36,24 @@
     }
   }
 
+  &__label {
+    color: $color-avatar;
+    text-transform: uppercase;
+  }
   &__input {
-    @include responsive-property(flex-basis, 0, 100%);
+    flex-basis: 100%;
   }
 
   &__textarea {
     width: 100%;
     @include responsive-property(padding, 1rem, 0.5rem);
     @include responsive-property(height, 6rem, 2.5rem);
+  }
+
+  &__button {
+    @include tablet {
+      margin-bottom: 0.5rem;
+      width: 9.375rem;
+    }
   }
 }
