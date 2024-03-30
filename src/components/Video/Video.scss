@@ -3,16 +3,21 @@
 .video {
   @include responsive-property(padding-top, $padding-m, $padding-t);
   &__wrapper {
-    @include responsive-margin;
+    background: $color-video-bg;
+  }
+  &__container {
+    @include responsive-property(max-width, 100%, 700px, 850px);
+    margin: 0 auto;
+    width: 100%;
   }
 
   &__player {
     width: 100%;
+    height: auto;
+  }
 
-    &::poster {
-      width: 100%;
-      height: auto;
-    }
+  &__copy {
+    @include responsive-margin;
   }
 
   &__subheader {
@@ -27,8 +32,8 @@
     @include responsive-property(border-top, 1px solid $color-divider, none);
   }
 
-  &__subtitle {
-    @include responsive-property(flex-basis, 50%, 0);
+  &__channel {
+    @include responsive-property(flex-basis, 50%, 15.25rem);
   }
 
   &__date {
@@ -41,7 +46,11 @@
     }
   }
 
-  &__copy {
+  &__description {
     @include responsive-property(padding-top, $padding-m, $padding-t);
+  }
+
+  &__comments {
+    @include responsive-margin;
   }
 }
