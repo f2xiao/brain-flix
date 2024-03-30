@@ -1,0 +1,30 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+ul,
+li {
+  list-style: none;
+}
+.next-videos {
+  &__title {
+    color: $color-avatar;
+    @include responsive-property(padding, 16px 0, 24px 0);
+  }
+  &__list {
+    @include flex(column);
+    @include responsive-property(gap, 1rem, 1.5rem);
+  }
+  &__item {
+    @include flex;
+    gap: 1rem;
+  }
+
+  &__text {
+    @include flex(column);
+    justify-content: space-between;
+  }
+  &__img {
+    border-radius: 4px;
+    @include responsive-property(width, 100px, 110px);
+  }
+}
