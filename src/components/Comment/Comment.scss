@@ -1,0 +1,33 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comment {
+  @include flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid $color-avatar;
+
+  @include responsive-property(padding, $padding-m 0, $padding-t 0);
+
+  &__avatar {
+    @include desktop {
+      padding: 0 1rem;
+    }
+  }
+  &__body {
+    flex-basis: 100%;
+    @include flex();
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__name {
+    font-weight: 700;
+  }
+  &__timestamp {
+    color: $color-avatar;
+  }
+  &__text {
+    flex-basis: 100%;
+  }
+}
