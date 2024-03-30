@@ -15,42 +15,4 @@
     width: 100%;
     height: auto;
   }
-
-  &__copy {
-    @include responsive-margin;
-  }
-
-  &__subheader {
-    @include flex;
-    @include responsive-property(flex-wrap, wrap, nowrap);
-    @include responsive-property(gap, 1rem, 2rem);
-
-    border-top: 1px solid $color-divider;
-    border-bottom: 1px solid $color-divider;
-    padding: 1rem 0;
-
-    @include responsive-property(border-top, 1px solid $color-divider, none);
-  }
-
-  &__channel {
-    @include responsive-property(flex-basis, 50%, 15.25rem);
-  }
-
-  &__date {
-    @include responsive-property(display, none, block);
-    flex-basis: 100%;
-
-    &--second {
-      @include responsive-property(display, block, none);
-      flex-basis: 50%;
-    }
-  }
-
-  &__description {
-    @include responsive-property(padding-top, $padding-m, $padding-t);
-  }
-
-  &__comments {
-    @include responsive-margin;
-  }
 }
