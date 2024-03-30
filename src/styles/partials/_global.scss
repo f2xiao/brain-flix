@@ -17,8 +17,6 @@ body {
 
 h1 {
   @include responsive-font(24px, 32px, 700, 33px, 44px, 700);
-  @include responsive-property(padding-top, 16px, 24px, 36px);
-  @include responsive-property(padding-bottom, 8px, 16px, 24px);
 }
 
 h2 {
@@ -27,6 +25,13 @@ h2 {
 
 h3 {
   @include responsive-font(12px, 20px, 700, 12px, 20px, 700);
+}
+
+h1,
+h2,
+h3 {
+  @include responsive-property(padding-top, 16px, 24px, 36px);
+  @include responsive-property(padding-bottom, 8px, 16px, 24px);
 }
 
 label,

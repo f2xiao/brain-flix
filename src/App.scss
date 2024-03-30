@@ -1,1 +1,10 @@
 @use "styles/partials/global" as *;
+@use "styles/partials/mixins" as *;
+
+.app {
+  &__wrapper {
+    @include responsive-margin;
+    @include flex(row);
+    @include responsive-property(flex-wrap, wrap, wrap, nowrap);
+  }
+}

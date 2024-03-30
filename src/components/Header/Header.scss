@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .site-header {
-  @include responsive-property(padding-top, $padding-m, $padding-t, $padding-d);
+  @include responsive-property(padding-top, $padding-m, $padding-t);
   &__wrapper {
     @include responsive-margin;
     @include flex-cross-center;

@@ -4,14 +4,16 @@
   @include responsive-property(padding-top, $padding-m, $padding-t);
   &__wrapper {
     background: $color-video-bg;
+    width: 100%;
   }
   &__container {
     @include responsive-property(max-width, 100%, 700px, 850px);
     margin: 0 auto;
-    width: 100%;
+    overflow: hidden;
   }
 
   &__player {
+    // display: block;
     width: 100%;
     height: auto;
   }

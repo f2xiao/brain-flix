@@ -12,9 +12,12 @@ textarea {
 .form {
   @include flex;
   gap: 1rem;
-  border-bottom: 1px solid $color-avatar;
 
-  @include responsive-property(padding, $padding-m 0, $padding-t 0);
+  @include responsive-property(padding-bottom, $padding-m, $padding-t);
+
+  @include desktop {
+    padding-right: 1.5rem;
+  }
 
   &__avatar {
     @include flex;
