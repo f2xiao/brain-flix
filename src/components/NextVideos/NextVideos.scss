@@ -6,6 +6,9 @@ li {
   list-style: none;
 }
 .next-videos {
+  &__wrapper {
+    @include responsive-margin;
+  }
   &__title {
     color: $color-avatar;
     @include responsive-property(padding, 16px 0, 24px 0);
