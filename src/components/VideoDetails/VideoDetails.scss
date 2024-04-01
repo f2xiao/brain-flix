@@ -9,10 +9,14 @@
     @include responsive-property(flex-wrap, wrap, nowrap);
     @include responsive-property(gap, 1rem, 2rem);
 
-    border-top: 1px solid $color-divider;
-    border-bottom: 1px solid $color-divider;
+    border-top: 0.0625rem solid $color-divider;
+    border-bottom: 0.0625rem solid $color-divider;
 
-    @include responsive-property(border-top, 1px solid $color-divider, none);
+    @include responsive-property(
+      border-top,
+      0.0625rem solid $color-divider,
+      none
+    );
 
     @include desktop {
       padding-right: 1rem;

@@ -14,7 +14,7 @@
 }
 
 // font
-@mixin font($size: 13px, $height: 18px, $weight: 400) {
+@mixin font($size: 0.8125rem, $height: 1.125rem, $weight: 400) {
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
@@ -110,9 +110,9 @@
 
 // input and textarea
 @mixin inputStyles {
-  border: 1px solid $color-input;
+  border: 0.0625rem solid $color-input;
   background-color: $color-input-bg;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   font-family: "Avenir Next", Helvetica, sans-serif;
 
   &:active {

@@ -12,31 +12,31 @@ body {
   font-family: "Avenir Next", Helvetica, sans-serif;
   color: $color-text;
   background: $color-bg;
-  @include responsive-font(13px, 18px, 400, 14px, 22px, 400);
+  @include responsive-font(0.8125rem, 1.125rem, 400, 0.875rem, 1.375rem, 400);
 }
 
 h1 {
-  @include responsive-font(24px, 32px, 700, 33px, 44px, 700);
+  @include responsive-font(1.5rem, 2rem, 700, 2.0625rem, 2.75rem, 700);
 }
 
 h2 {
-  @include responsive-font(13px, 18px, 700, 14px, 22px, 700);
+  @include responsive-font(0.8125rem, 1.125rem, 700, 0.875rem, 1.375rem, 700);
 }
 
 h3 {
-  @include responsive-font(12px, 20px, 700, 12px, 20px, 700);
+  @include responsive-font(0.75rem, 1.25rem, 700, 0.75rem, 1.25rem, 700);
 }
 
 h1,
 h2,
 h3 {
-  @include responsive-property(padding-top, 16px, 24px, 36px);
-  @include responsive-property(padding-bottom, 8px, 16px, 24px);
+  @include responsive-property(padding-top, 1rem, 1.5rem, 2.25rem);
+  @include responsive-property(padding-bottom, 0.5rem, 1rem, 1.5rem);
 }
 
 label,
 button {
-  @include responsive-font(10px, 20px, 600, 12px, 20px, 600);
+  @include responsive-font(0.625rem, 1.25rem, 600, 0.75rem, 1.25rem, 600);
 }
 
 button {
@@ -52,7 +52,7 @@ input {
   @include inputStyles;
   width: 100%;
 
-  @include responsive-property(padding, 12px, 16px);
+  @include responsive-property(padding, 0.75rem, 1rem);
   @include responsive-property(padding-left, 2rem, 2rem);
 
   &::placeholder {
