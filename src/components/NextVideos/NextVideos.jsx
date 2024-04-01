@@ -1,9 +1,6 @@
 import "./NextVideos.scss";
 
-const NextVideos = ({ nextVidoes, sendData }) => {
-  const handleClick = (id) => {
-    sendData(id);
-  };
+const NextVideos = ({ nextVidoes, handleClick }) => {
   return (
     <div className="next-videos">
       <div className="next-videos__wrapper">
