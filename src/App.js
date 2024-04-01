@@ -24,7 +24,7 @@ function App() {
       <Video image={currentVideo.image} video={currentVideo.video} />
       <div className="app__wrapper">
         <VideoDetails videoObj={currentVideo} />
-        <NextVideos nextVidoes={nextVideos} sendData={switchVideos} />
+        <NextVideos nextVidoes={nextVideos} handleClick={switchVideos} />
       </div>
     </div>
   );
