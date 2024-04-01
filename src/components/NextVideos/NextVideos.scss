@@ -16,7 +16,7 @@ li {
 
   &__title {
     color: $color-avatar;
-    @include responsive-property(padding, 16px 0, 24px 0);
+    @include responsive-property(padding, 16px 0, 32px 0 16px 0);
   }
   &__list {
     @include flex(column);

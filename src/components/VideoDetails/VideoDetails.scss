@@ -3,7 +3,8 @@
 .video-details {
   &__subheader {
     @include flex-cross-center;
-    padding: 1rem 0;
+    @include responsive-property(padding-top, 1rem, 0);
+    @include responsive-property(padding-bottom, 1rem, 0.5rem);
 
     @include responsive-property(flex-wrap, wrap, nowrap);
     @include responsive-property(gap, 1rem, 2rem);
