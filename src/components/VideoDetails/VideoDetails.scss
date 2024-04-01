@@ -19,7 +19,7 @@
   }
 
   &__channel {
-    @include responsive-property(flex-basis, 50%, 17rem);
+    @include responsive-property(flex-basis, 50%, 20rem);
     padding: 0;
   }
 
@@ -35,5 +35,8 @@
 
   &__description {
     @include responsive-property(padding-top, $padding-m, $padding-t);
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
 }
