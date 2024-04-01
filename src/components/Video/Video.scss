@@ -7,7 +7,7 @@
     width: 100%;
   }
   &__container {
-    @include responsive-property(max-width, 100%, 700px, 850px);
+    @include responsive-property(max-width, 100%, 43.75rem, 53.125rem);
     margin: 0 auto;
     overflow: hidden;
   }

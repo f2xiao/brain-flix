@@ -1,14 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-textarea {
-  border: 1px solid $color-input;
-  background-color: $color-input-bg;
-  border-radius: 4px;
-  resize: none;
-  font-family: "Avenir Next", Helvetica, sans-serif;
-}
-
 .form {
   @include flex;
   gap: 1rem;

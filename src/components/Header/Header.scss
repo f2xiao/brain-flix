@@ -16,14 +16,14 @@
     @include flex-main-center;
 
     @include tablet {
-      flex-basis: 120px;
+      flex-basis: 7.5rem;
       flex-grow: 1;
       justify-content: flex-start;
     }
   }
 
   &__img {
-    height: 25px;
+    height: 1.5625rem;
   }
 
   &__avatar {
@@ -37,7 +37,7 @@
   &__search {
     @include responsive-property(flex-grow, 1, 0);
     position: relative;
-    min-width: 236px;
+    min-width: 14.75rem;
     max-width: 100%;
   }
 
