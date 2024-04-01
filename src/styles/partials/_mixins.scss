@@ -92,7 +92,7 @@
   }
 
   @include tablet {
-    max-width: 9.375rem;
+    width: 9.375rem;
   }
 }
 
@@ -105,5 +105,17 @@
   @include tablet {
     width: 2.5rem;
     height: 2.5rem;
+  }
+}
+
+// input and textarea
+@mixin inputStyles {
+  border: 1px solid $color-input;
+  background-color: $color-input-bg;
+  border-radius: 4px;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+
+  &:active {
+    border: 2px solid $color-cta;
   }
 }
