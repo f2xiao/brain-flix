@@ -3,7 +3,7 @@
 
 .next-videos {
   @include tablet {
-    flex-basis: 20rem;
+    flex-basis: 21rem;
     flex-shrink: 0;
   }
 
@@ -15,7 +15,7 @@
   @include responsive-property(padding-bottom, 2.25rem, 2.25rem, 4rem);
 
   &__title {
-    color: $color-avatar;
+    color: $color-text-secondary;
     @include responsive-property(
       padding,
       $padding-m 0,

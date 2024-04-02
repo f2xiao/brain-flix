@@ -38,6 +38,9 @@ label,
 button {
   @include responsive-font(0.625rem, 1.25rem, 600, 0.75rem, 1.25rem, 600);
 }
+label {
+  color: $color-text-secondary;
+}
 
 button {
   border: none;
