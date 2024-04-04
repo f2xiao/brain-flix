@@ -2,7 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY, API_URL } from "../../utils/api";
-import VideoDetails from "../../components/VideoDetails-sp2/VideoDetails";
+import VideoDetails from "../../components/VideoDetails/VideoDetails";
+import NextVideos from "../../components/NextVideos/NextVideos";
+import Video from "../../components/Video/Video";
 
 const VideoDetailsPage = () => {
   const { videoId } = useParams();
@@ -35,8 +37,10 @@ const VideoDetailsPage = () => {
 
   return (
     <main>
+      <Video currentVideoId={currentVideoId} />
       <div className="video-details-page__wrapper">
         <VideoDetails currentVideoId={currentVideoId} />
+        <NextVideos nextVidoes={nextVideos} />
       </div>
     </main>
   );
