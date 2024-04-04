@@ -5,6 +5,7 @@ import { API_KEY, API_URL } from "../../utils/api";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import Video from "../../components/Video/Video";
+import "./VideoDetailsPage.scss";
 
 const VideoDetailsPage = () => {
   const { videoId } = useParams();
