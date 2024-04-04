@@ -1,0 +1,10 @@
+@use "styles/partials/global" as *;
+@use "styles/partials/mixins" as *;
+
+.video-details-page {
+  &__wrapper {
+    @include responsive-margin;
+    @include flex(row);
+    @include responsive-property(flex-wrap, wrap, wrap, nowrap);
+  }
+}

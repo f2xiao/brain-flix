@@ -35,7 +35,7 @@ const VideoDetailsPage = () => {
 
   return (
     <main>
-      <div className="app__wrapper">
+      <div className="video-details-page__wrapper">
         <VideoDetails currentVideoId={currentVideoId} />
       </div>
     </main>
