@@ -18,7 +18,7 @@ const VideoDetailsPage = () => {
         const response = await axios.get(
           `${API_URL}/videos?api_key=${API_KEY}`
         );
-        console.log(response.data);
+        // console.log(response.data);
         setVideosList(response.data);
         setIsFetching(false);
       } catch (error) {
@@ -30,7 +30,9 @@ const VideoDetailsPage = () => {
   }, []);
 
   if (isFetching) {
-    return <p>... Loading videos data ...</p>;
+    return (
+      <p className="video-details-page__wrapper">... Loading videos data ...</p>
+    );
   }
 
   const currentVideoId = videoId ? videoId : videosList[0].id;
