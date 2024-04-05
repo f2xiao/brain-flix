@@ -10,21 +10,48 @@ import { API_URL, API_KEY } from "../../utils/api";
 
 const VideoDetails = ({ currentVideoId }) => {
   const [currentVideo, setCurrentVideo] = useState(null);
+  const [newComment, setNewComment] = useState("");
+  const handleChange = (event) => {
+    setNewComment(event.target.value);
+  };
 
   // console.log("Video to load: ", currentVideoId);
 
-  useEffect(() => {
-    const fetchVideoDetails = async () => {
-      try {
-        const response = await axios.get(
-          `${API_URL}/videos/${currentVideoId}?api_key=${API_KEY}`
-        );
-        setCurrentVideo(response.data);
-      } catch (error) {
-        console.log("can't get video details data");
-      }
+  const postComment = async (event, videoId) => {
+    // prevent page refresh after from submission
+    event.preventDefault();
+    console.log(videoId);
+    console.log(newComment);
+    // post the comment to /videos/:id/comments
+    const newCommentObj = {
+      name: "Vivi",
+      comment: newComment,
     };
+    const response = await axios.post(
+      `${API_URL}/videos/${currentVideoId}/comments?api_key=${API_KEY}`,
+      newCommentObj
+    );
 
+    const returnedComment = response.data;
+
+    try {
+      fetchVideoDetails();
+    } catch (error) {
+      console.log("can't post comment due to: ", error);
+    }
+  };
+  const fetchVideoDetails = async () => {
+    try {
+      const response = await axios.get(
+        `${API_URL}/videos/${currentVideoId}?api_key=${API_KEY}`
+      );
+      setCurrentVideo(response.data);
+    } catch (error) {
+      console.log("can't get video details data");
+    }
+  };
+
+  useEffect(() => {
     fetchVideoDetails();
   }, [currentVideoId]);
 
@@ -49,10 +76,20 @@ const VideoDetails = ({ currentVideoId }) => {
       <p className="video-details__description">{currentVideo.description}</p>
 
       <h3>{currentVideo.comments.length} Comments</h3>
-      <Form />
-      {currentVideo.comments.map((commentObj) => (
-        <Comment key={commentObj.id} commentObj={commentObj} />
-      ))}
+      <Form
+        handleSubmit={(event) => {
+          postComment(event, currentVideoId);
+        }}
+        handleChange={(e) => {
+          handleChange(e);
+        }}
+        newComment={newComment}
+      />
+      {currentVideo.comments
+        .sort((a, b) => b.timestamp - a.timestamp)
+        .map((commentObj) => (
+          <Comment key={commentObj.id} commentObj={commentObj} />
+        ))}
     </div>
   );
 };

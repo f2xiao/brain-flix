@@ -4,9 +4,9 @@ import Button from "../Button/Button";
 import avatarUrl from "../../assets/images/Mohan-muruge.jpg";
 import commentUrl from "../../assets/icons/add_comment.svg";
 
-const Form = () => {
+const Form = ({ newComment, handleChange, handleSubmit }) => {
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <Avatar className="form__avatar" url={avatarUrl} />
       <div className="form__body">
         <div className="form__input">
@@ -16,6 +16,8 @@ const Form = () => {
             type="textarea"
             placeholder="Add a new comment"
             required
+            onChange={handleChange}
+            value={newComment}
           ></textarea>
         </div>
         <div className="form__button">
