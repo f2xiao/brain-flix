@@ -47,4 +47,7 @@
     left: 0.5rem;
     transform: translateY(-50%);
   }
+  &__link {
+    @include responsive-property(width, 100%, 150px);
+  }
 }

@@ -11,7 +11,7 @@ import { API_URL, API_KEY } from "../../utils/api";
 const VideoDetails = ({ currentVideoId }) => {
   const [currentVideo, setCurrentVideo] = useState(null);
 
-  console.log("Video to load: ", currentVideoId);
+  // console.log("Video to load: ", currentVideoId);
 
   useEffect(() => {
     const fetchVideoDetails = async () => {

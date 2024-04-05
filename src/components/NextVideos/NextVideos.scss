@@ -27,6 +27,10 @@
     @include flex(column);
     @include responsive-property(gap, 1rem, 1.5rem);
   }
+
+  &__link {
+    color: $color-text;
+  }
   &__item {
     @include flex;
     gap: 1rem;
