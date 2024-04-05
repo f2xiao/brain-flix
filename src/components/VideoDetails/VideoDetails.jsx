@@ -27,17 +27,32 @@ const VideoDetails = ({ currentVideoId }) => {
       name: "Vivi",
       comment: newComment,
     };
-    const response = await axios.post(
-      `${API_URL}/videos/${currentVideoId}/comments?api_key=${API_KEY}`,
-      newCommentObj
-    );
-
-    const returnedComment = response.data;
 
     try {
+      const response = await axios.post(
+        `${API_URL}/videos/${currentVideoId}/comments?api_key=${API_KEY}`,
+        newCommentObj
+      );
+
+      const returnedComment = response.data;
+
       fetchVideoDetails();
+      setNewComment("");
     } catch (error) {
       console.log("can't post comment due to: ", error);
+    }
+  };
+
+  const deleteComment = async (videoId, commentId) => {
+    console.log(videoId, commentId);
+    try {
+      const response = await axios.delete(
+        `${API_URL}/videos/${videoId}/comments/${commentId}?api_key=${API_KEY}`
+      );
+      // console.log(response.data);
+      fetchVideoDetails();
+    } catch (error) {
+      console.log("can't delete the comment", error);
     }
   };
   const fetchVideoDetails = async () => {
@@ -45,6 +60,8 @@ const VideoDetails = ({ currentVideoId }) => {
       const response = await axios.get(
         `${API_URL}/videos/${currentVideoId}?api_key=${API_KEY}`
       );
+      // console.log(response.data);
+
       setCurrentVideo(response.data);
     } catch (error) {
       console.log("can't get video details data");
@@ -88,7 +105,13 @@ const VideoDetails = ({ currentVideoId }) => {
       {currentVideo.comments
         .sort((a, b) => b.timestamp - a.timestamp)
         .map((commentObj) => (
-          <Comment key={commentObj.id} commentObj={commentObj} />
+          <Comment
+            key={commentObj.id}
+            commentObj={commentObj}
+            handleClick={() => {
+              deleteComment(currentVideoId, commentObj.id);
+            }}
+          />
         ))}
     </div>
   );

@@ -6,7 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 const UploadForm = () => {
   const navigate = useNavigate();
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
     alert("Upload successfully, redirect to home page");
     navigate("/");
   };
