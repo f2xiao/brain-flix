@@ -57,10 +57,6 @@ input {
 
   @include responsive-property(padding, 0.75rem, 1rem);
   @include responsive-property(padding-left, 2rem, 2rem);
-
-  &::placeholder {
-    text-transform: capitalize;
-  }
 }
 
 textarea {

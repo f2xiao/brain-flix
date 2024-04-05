@@ -27,7 +27,7 @@ const Header = () => {
             src={searchUrl}
             alt="search icon"
           />
-          <Input type="search" />
+          <Input className="site-header__input" type="search" />
         </div>
         <Avatar className="site-header__avatar" url={avatarUrl} />
         <Link className="site-header__link" to="/upload">
