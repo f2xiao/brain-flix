@@ -20,8 +20,8 @@ const VideoDetails = ({ currentVideoId }) => {
   const postComment = async (event, videoId) => {
     // prevent page refresh after from submission
     event.preventDefault();
-    console.log(videoId);
-    console.log(newComment);
+    // console.log(videoId);
+    // console.log(newComment);
     // post the comment to /videos/:id/comments
     const newCommentObj = {
       name: "Vivi",
