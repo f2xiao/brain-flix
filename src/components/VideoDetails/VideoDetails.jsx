@@ -70,6 +70,7 @@ const VideoDetails = ({ currentVideoId }) => {
 
   useEffect(() => {
     fetchVideoDetails();
+    window.scrollTo(0, 0);
   }, [currentVideoId]);
 
   if (!currentVideo) {
