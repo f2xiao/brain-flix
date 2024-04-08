@@ -44,7 +44,7 @@ const VideoDetails = ({ currentVideoId }) => {
   };
 
   const deleteComment = async (videoId, commentId) => {
-    console.log(videoId, commentId);
+    // console.log(videoId, commentId);
     try {
       const response = await axios.delete(
         `${API_URL}/videos/${videoId}/comments/${commentId}?api_key=${API_KEY}`
