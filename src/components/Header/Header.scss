@@ -54,6 +54,6 @@
     transform: translateY(-50%);
   }
   &__link {
-    @include responsive-property(width, 100%, 150px);
+    @include responsive-property(width, 100%, 9.375rem);
   }
 }

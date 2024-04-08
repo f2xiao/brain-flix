@@ -16,8 +16,8 @@
 
   &__body {
     width: 50%;
-    border: 1px solid $color-divider;
-    border-radius: 5px;
+    border: 0.0625rem solid $color-divider;
+    border-radius: 0.3125rem;
     padding: 2rem;
     background-color: $color-cta-hover;
     color: $color-bg;
