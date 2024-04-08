@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  @include flex-main-center;
+  align-items: center;
+
+  &__body {
+    width: 50%;
+    border: 1px solid $color-divider;
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: $color-cta-hover;
+    color: $color-bg;
+  }
+}
