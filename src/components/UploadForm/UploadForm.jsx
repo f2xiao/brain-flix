@@ -5,16 +5,49 @@ import Button from "../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "../../components/Modal/Modal";
 import { useState } from "react";
+import axios from "axios";
+import { API_URL, API_KEY } from "../../utils/api";
 
 const UploadForm = () => {
   const [showModal, setShowModal] = useState(false);
+  const [videoTitle, setVideoTitle] = useState("");
+  const [videoDescription, setVideoDescription] = useState("");
   const navigate = useNavigate();
-  const handleSubmit = (event) => {
+  const handleInput = (event) => {
+    setVideoTitle(event.target.value);
+  };
+  const handleTextarea = (event) => {
+    setVideoDescription(event.target.value);
+  };
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setShowModal(true);
-    setTimeout(() => {
-      navigate("/");
-    }, 3000);
+    // submit the form data to the backend server
+    const newVideo = {
+      title: videoTitle,
+      description: videoDescription,
+      channel: "BrainStation",
+      image: "http://localhost:8080/images/image9.jpg",
+      views: "160,300",
+      likes: "80,080",
+      duration: "0:20",
+      video: "http://localhost:8080/BrainStation Sample Video.mp4",
+      comments: [],
+    };
+
+    try {
+      const response = await axios.post(
+        `${API_URL}/videos?api_key=${API_KEY}`,
+        newVideo
+      );
+      if (response.data) {
+        setShowModal(true);
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+      }
+    } catch (error) {
+      console.log("upload:", error);
+    }
   };
   return (
     <>
@@ -43,6 +76,8 @@ const UploadForm = () => {
                 type="text"
                 className="upload__input"
                 required
+                value={videoTitle}
+                onChange={handleInput}
               />
               <label
                 htmlFor="description"
@@ -55,6 +90,8 @@ const UploadForm = () => {
                 className="upload__textarea"
                 placeholder="Add a description to your video"
                 required
+                value={videoDescription}
+                onChange={handleTextarea}
               ></textarea>
             </div>
             <div className="upload__cta">
