@@ -30,7 +30,7 @@ const VideoDetails = ({ currentVideoId }) => {
 
     try {
       const response = await axios.post(
-        `${API_URL}/videos/${currentVideoId}/comments?api_key=${API_KEY}`,
+        `${API_URL}/videos/${videoId}/comments?api_key=${API_KEY}`,
         newCommentObj
       );
 
@@ -70,6 +70,7 @@ const VideoDetails = ({ currentVideoId }) => {
 
   useEffect(() => {
     fetchVideoDetails();
+    window.scrollTo(0, 0);
   }, [currentVideoId]);
 
   if (!currentVideo) {
