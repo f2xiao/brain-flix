@@ -100,7 +100,6 @@ const VideoDetails = ({ currentVideoId }) => {
           {new Date(currentVideo.timestamp).toLocaleDateString()}
         </p>
         <Stat
-          className="stat stat--likes"
           iconUrl={likesIcon}
           name={currentVideo.likes}
           handleClick={() => {

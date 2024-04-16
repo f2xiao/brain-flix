@@ -1,8 +1,13 @@
 import "./Stat.scss";
-const Stat = ({ className = "stat", iconUrl, name, handleClick = null }) => {
+const Stat = ({ iconUrl, name, handleClick = null }) => {
   return (
-    <div className={className}>
-      <img src={iconUrl} alt={`${name} icon`} onClick={handleClick} />
+    <div className="stat">
+      <img
+        className={handleClick && "stat__likes"}
+        src={iconUrl}
+        alt={`${name} icon`}
+        onClick={handleClick}
+      />
       <p className="stat__number">{name}</p>
     </div>
   );

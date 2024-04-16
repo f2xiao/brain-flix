@@ -3,7 +3,7 @@
 .stat {
   @include flex;
 
-  &--likes {
+  &__likes {
     cursor: pointer;
   }
 
