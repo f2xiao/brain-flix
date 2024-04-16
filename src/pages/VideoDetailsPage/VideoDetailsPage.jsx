@@ -39,7 +39,7 @@ const VideoDetailsPage = () => {
   const nextVideos = videosList.filter((video) => video.id !== currentVideoId);
 
   return (
-    <main>
+    <main className="video-details-page">
       <Video currentVideoId={currentVideoId} />
       <div className="video-details-page__wrapper">
         <VideoDetails currentVideoId={currentVideoId} />
