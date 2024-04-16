@@ -3,6 +3,10 @@
 .stat {
   @include flex;
 
+  &--likes {
+    cursor: pointer;
+  }
+
   &__number {
     padding-left: 0.5rem;
   }
