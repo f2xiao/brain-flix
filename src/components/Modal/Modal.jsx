@@ -1,10 +1,10 @@
 import "./Modal.scss";
 
-const Modal = () => {
+const Modal = ({ message }) => {
   return (
     <div className="modal">
       <div className="modal__body">
-        <p>Publish successfully, redirecting to the homepage...</p>
+        <p>{message}</p>
       </div>
     </div>
   );

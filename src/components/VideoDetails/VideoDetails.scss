@@ -1,6 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 .video-details {
+  width: 100%;
   &__subheader {
     @include flex-cross-center;
     @include responsive-property(padding-top, 1rem, 0);

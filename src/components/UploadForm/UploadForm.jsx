@@ -40,9 +40,11 @@ const UploadForm = () => {
         newVideo
       );
       if (response.data) {
+        // console.log(response.data.id);
+
         setShowModal(true);
         setTimeout(() => {
-          navigate("/");
+          navigate(`/videos/${response.data.id}`);
         }, 3000);
       }
     } catch (error) {
@@ -52,7 +54,7 @@ const UploadForm = () => {
   return (
     <>
       {showModal ? (
-        <Modal />
+        <Modal message="Publish successfully, redirecting to the page of the uploaded video..." />
       ) : (
         <div className="upload">
           <h1>Upload Video</h1>
