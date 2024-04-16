@@ -39,6 +39,8 @@
     position: relative;
     min-width: 14.75rem;
     max-width: 100%;
+    @include flex;
+    gap: 1rem;
   }
 
   &__input {

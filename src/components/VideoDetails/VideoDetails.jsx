@@ -34,7 +34,7 @@ const VideoDetails = ({ currentVideoId }) => {
         newCommentObj
       );
 
-      const returnedComment = response.data;
+      // const returnedComment = response.data;
 
       fetchVideoDetails();
       setNewComment("");

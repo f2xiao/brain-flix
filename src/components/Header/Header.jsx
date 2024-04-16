@@ -28,8 +28,8 @@ const Header = () => {
             alt="search icon"
           />
           <Input className="site-header__input" type="search" />
+          <Avatar className="site-header__avatar" url={avatarUrl} />
         </div>
-        <Avatar className="site-header__avatar" url={avatarUrl} />
         <Link className="site-header__link" to="/upload">
           <Button text="upload" iconUrl={uploadUrl} />
         </Link>
