@@ -29,7 +29,7 @@ const VideoDetails = ({ currentVideoId }) => {
     };
 
     try {
-      const response = await axios.post(
+      await axios.post(
         `${API_URL}/videos/${videoId}/comments?api_key=${API_KEY}`,
         newCommentObj
       );
@@ -46,7 +46,7 @@ const VideoDetails = ({ currentVideoId }) => {
   const deleteComment = async (videoId, commentId) => {
     // console.log(videoId, commentId);
     try {
-      const response = await axios.delete(
+      await axios.delete(
         `${API_URL}/videos/${videoId}/comments/${commentId}?api_key=${API_KEY}`
       );
       // console.log(response.data);
@@ -65,6 +65,16 @@ const VideoDetails = ({ currentVideoId }) => {
       setCurrentVideo(response.data);
     } catch (error) {
       console.log("can't get video details data");
+    }
+  };
+
+  const likeVideo = async (videoId) => {
+    // console.log(videoId);
+    try {
+      await axios.put(`${API_URL}/videos/${videoId}/likes?api_key=${API_KEY}`);
+      fetchVideoDetails();
+    } catch (error) {
+      console.log(`can't like video`);
     }
   };
 
@@ -89,7 +99,14 @@ const VideoDetails = ({ currentVideoId }) => {
         <p className="video-details__date video-details__date--second">
           {new Date(currentVideo.timestamp).toLocaleDateString()}
         </p>
-        <Stat iconUrl={likesIcon} name={currentVideo.likes} />
+        <Stat
+          className="stat stat--likes"
+          iconUrl={likesIcon}
+          name={currentVideo.likes}
+          handleClick={() => {
+            likeVideo(currentVideoId);
+          }}
+        />
       </div>
       <p className="video-details__description">{currentVideo.description}</p>
 
