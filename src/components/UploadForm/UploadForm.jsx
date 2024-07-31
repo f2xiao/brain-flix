@@ -25,7 +25,7 @@ const UploadForm = () => {
     const newVideo = {
       title: videoTitle,
       description: videoDescription,
-      channel: "BrainStation",
+      channel: "Fangfang",
       image: "https://brainflix-api-9k10.onrender.com/images/image9.jpg",
       views: "0",
       likes: "0",
