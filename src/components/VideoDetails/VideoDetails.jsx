@@ -81,6 +81,7 @@ const VideoDetails = ({ currentVideoId }) => {
   useEffect(() => {
     fetchVideoDetails();
     window.scrollTo(0, 0);
+    // eslint-disable-next-line
   }, [currentVideoId]);
 
   if (!currentVideo) {
