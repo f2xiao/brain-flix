@@ -26,11 +26,11 @@ const UploadForm = () => {
       title: videoTitle,
       description: videoDescription,
       channel: "BrainStation",
-      image: "http://localhost:8080/images/image9.jpg",
+      image: "https://brainflix-api-9k10.onrender.com/images/image9.jpg",
       views: "0",
       likes: "0",
       duration: "0:20",
-      video: "http://localhost:8080/BrainStation Sample Video.mp4",
+      video: "https://www.youtube.com/watch?v=MUCN-JwUvbY",
       comments: [],
     };
 
