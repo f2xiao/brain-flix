@@ -24,7 +24,7 @@ const VideoDetails = ({ currentVideoId }) => {
     // console.log(newComment);
     // post the comment to /videos/:id/comments
     const newCommentObj = {
-      name: "Vivi",
+      name: "Fangfang",
       comment: newComment,
     };
 
