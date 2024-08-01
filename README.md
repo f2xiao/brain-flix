@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Brainflix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo](https://raw.githubusercontent.com/f2xiao/brain-flix/main/src/assets/logo/BrainFlix-logo.svg)
 
-## Available Scripts
+![Brainflix Home page]()
+![Brainflix Upload page]()
 
-In the project directory, you can run:
+This is a static webpage of a coffee shop. Please feel free to try our website, and really appreciate if you can give any feedback to me.
 
-### `npm start`
+[Brainflix Website](https://brain-flix.onrender.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo Video
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Description
 
-### `npm test`
+A web application that shows the menus and products of a coffeeshop. Convert [design mockups](https://github.com/f2xiao/coffeeshop/blob/main/mockup/Coffee%20Shop%20Landing%20Page%20Mockup.pdf) (with [style guide](https://github.com/f2xiao/coffeeshop/blob/main/mockup/Coffee%20Shop%20Style%20Guide.pdf)) into functional web pages, ensure that the interface is visually appealing and user-friendly.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Home page:
+  - renders the details of a video and a list of other videos
+  - add/delete comment
+  - like a video
+- Upload page:
+  - add video title and description
+  - upload, after upload successfully the page refresh and go to the homepage
 
-### `npm run build`
+### Team Members
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Fangfang Xiao](https://github.com/f2xiao)
+  Full-stack developer, CICD setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React, SASS, Express
