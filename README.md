@@ -15,7 +15,7 @@ https://github.com/f2xiao/brain-flix/blob/main/screenshot/demo.mp4
 
 ### Description
 
-A web application that shows the menus and products of a coffeeshop. Convert [design mockups](https://github.com/f2xiao/coffeeshop/blob/main/mockup/Coffee%20Shop%20Landing%20Page%20Mockup.pdf) (with [style guide](https://github.com/f2xiao/coffeeshop/blob/main/mockup/Coffee%20Shop%20Style%20Guide.pdf)) into functional web pages, ensure that the interface is visually appealing and user-friendly.
+A web application that shows the menus and products of a coffeeshop. Convert [design mockups]() (with [style guide]()) into functional web pages, ensure that the interface is visually appealing and user-friendly.
 
 - Home page:
   - renders the details of a video and a list of other videos
@@ -28,6 +28,7 @@ A web application that shows the menus and products of a coffeeshop. Convert [de
 ### Team Members
 
 - [Fangfang Xiao](https://github.com/f2xiao)
+
   Full-stack developer, CICD setup
 
 ### Tech Stack
