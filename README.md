@@ -2,14 +2,16 @@
 
 ![logo](https://raw.githubusercontent.com/f2xiao/brain-flix/main/src/assets/logo/BrainFlix-logo.svg)
 
-![Brainflix Home page]()
-![Brainflix Upload page]()
+![Brainflix Home page](https://github.com/f2xiao/brain-flix/blob/main/screenshot/home_page.png)
+![Brainflix Upload page](https://github.com/f2xiao/brain-flix/blob/main/screenshot/upload_page.png)
 
 This is a static webpage of a coffee shop. Please feel free to try our website, and really appreciate if you can give any feedback to me.
 
 [Brainflix Website](https://brain-flix.onrender.com)
 
 ## Demo Video
+
+https://github.com/f2xiao/brain-flix/blob/main/screenshot/demo.mp4
 
 ### Description
 
