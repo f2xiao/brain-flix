@@ -11,7 +11,7 @@ This is a static webpage of a coffee shop. Please feel free to try our website, 
 
 ## Demo Video
 
-https://github.com/f2xiao/brain-flix/blob/main/screenshot/demo.mp4
+https://github.com/user-attachments/assets/d0c6195e-33be-4f28-8725-c7326f61ae85
 
 ### Description
 
