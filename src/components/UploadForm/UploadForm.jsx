@@ -30,7 +30,8 @@ const UploadForm = () => {
       views: "0",
       likes: "0",
       duration: "0:20",
-      video: "https://www.youtube.com/watch?v=MUCN-JwUvbY",
+      video:
+        "https://brainflix-api-9k10.onrender.com/Attack on Titan Final Season THE FINAL CHAPTERS Special 2.mp4",
       comments: [],
     };
 
